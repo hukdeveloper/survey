@@ -1,6 +1,6 @@
 "use client";
 
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { ResponsivePie } from "@nivo/pie";
 
 const data = [
@@ -32,6 +32,9 @@ const data = [
 
 const Gender = () => (
   <Box height={"500px"}>
+    <Typography variant="h6" mt={1}>
+      Gender Classification
+    </Typography>
     <ResponsivePie
       data={data}
       margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
