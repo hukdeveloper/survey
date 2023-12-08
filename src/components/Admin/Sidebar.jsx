@@ -89,6 +89,12 @@ const Sidebar = () => {
               >
                 Geo Grpahic
               </MenuItem>
+              <MenuItem
+                icon={<Subject />}
+                onClick={() => router.push("/admin/fav_number")}
+              >
+                Fav Number
+              </MenuItem>
             </SubMenu>
           </Menu>
           <br />
