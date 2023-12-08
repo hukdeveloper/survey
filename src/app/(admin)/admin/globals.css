@@ -1,0 +1,44 @@
+html,
+body,
+#root,
+.app,
+.content {
+  width: 100%;
+}
+body {
+  overflow: hidden;
+  /* overflow-y: auto; */
+  max-width: 1700px;
+  min-height: 100vh;
+  width: 100%;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Loading.js Animation */
+
+@keyframes gradientAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animated-border {
+  background: linear-gradient(
+    45deg,
+    #09009f,
+    #00ff95 80%
+  ); /* You can change the colors here */
+  animation: gradientAnimation 1s linear infinite;
+}
+
+/* Quill Editor */
+
+.ql-editor {
+  min-height: 250px !important;
+}
