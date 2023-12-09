@@ -80,7 +80,7 @@ const ScatterPlot = () => {
   ];
 
   const options = {
-    title: "Charges of subatomic particles",
+    title: "Histogram",
     legend: { position: "top", maxLines: 2 },
     colors: ["#5C3292", "#1A8763"],
     interpolateNulls: false,

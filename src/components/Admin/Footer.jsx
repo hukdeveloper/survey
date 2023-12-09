@@ -11,7 +11,7 @@ const Footer = () => {
       height={50}
       // bgcolor={theme}
     >
-      <Typography variant="subtitle2">Desinged & Developed by HUK</Typography>
+      {/* <Typography variant="subtitle2">Desinged & Developed by HUK</Typography> */}
     </Box>
   );
 };

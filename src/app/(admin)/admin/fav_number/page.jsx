@@ -61,7 +61,7 @@ export const data = [
 export const options = {
   // Material design options
   chart: {
-    title: "Fav Number",
+    title: "Scatter Plot",
   },
   hAxis: { title: "Hours Studied" },
   vAxis: { title: "Grade" },
@@ -70,7 +70,7 @@ export const options = {
 export default function App() {
   return (
     <>
-      <Typography variant="h6">Fav_Number Chart</Typography>
+      {/* <Typography variant="h6">Fav_Number Chart</Typography> */}
       <Chart
         chartType="Scatter"
         width="80%"
