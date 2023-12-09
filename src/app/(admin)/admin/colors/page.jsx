@@ -1,32 +1,24 @@
 "use client";
 
 import { Box, Typography } from "@mui/material";
-import { ResponsivePie } from "@nivo/pie";
+import { ResponsiveBar } from "@nivo/bar";
 
 const data = [
   {
-    id: "FFFFFF",
-    label: "FFFFFF",
-    value: 278,
-    color: "hsl(268, 70%, 50%)",
+    id: "1",
+    EEEEEE: "39",
   },
   {
-    id: "EEEEEE",
-    label: "EEEEEE",
-    value: 39,
-    color: "hsl(188, 70%, 50%)",
+    id: "2",
+    FFFFFF: "137",
   },
   {
-    id: "C0DEED",
-    label: "C0DEED",
-    value: 534,
-    color: "hsl(237, 70%, 50%)",
+    id: "3",
+    C0DEED: "534",
   },
   {
-    id: "0",
-    label: "0",
-    value: 247,
-    color: "hsl(138, 70%, 50%)",
+    id: "4",
+    0: "45",
   },
 ];
 
@@ -35,33 +27,22 @@ const Colors = () => (
     <Typography variant="h6" mt={1}>
       Colors Classification
     </Typography>
-    <ResponsivePie
+    <ResponsiveBar
       data={data}
-      margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
-      innerRadius={0.5}
-      padAngle={0.7}
-      cornerRadius={3}
-      activeOuterRadiusOffset={8}
-      borderWidth={1}
-      borderColor={{
-        from: "color",
-        modifiers: [["darker", 0.2]],
-      }}
-      arcLinkLabelsSkipAngle={10}
-      arcLinkLabelsTextColor="#333333"
-      arcLinkLabelsThickness={2}
-      arcLinkLabelsColor={{ from: "color" }}
-      arcLabelsSkipAngle={10}
-      arcLabelsTextColor={{
-        from: "color",
-        modifiers: [["darker", 2]],
-      }}
+      keys={["EEEEEE", "FFFFFF", "C0DEED", "0"]}
+      indexBy="id"
+      margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
+      padding={0.3}
+      groupMode="grouped"
+      valueScale={{ type: "linear" }}
+      indexScale={{ type: "band", round: true }}
+      colors={{ scheme: "nivo" }}
       defs={[
         {
           id: "dots",
           type: "patternDots",
           background: "inherit",
-          color: "rgba(255, 255, 255, 0.3)",
+          color: "#38bcb2",
           size: 4,
           padding: 1,
           stagger: true,
@@ -70,7 +51,7 @@ const Colors = () => (
           id: "lines",
           type: "patternLines",
           background: "inherit",
-          color: "rgba(255, 255, 255, 0.3)",
+          color: "#eed312",
           rotation: -45,
           lineWidth: 6,
           spacing: 10,
@@ -79,78 +60,76 @@ const Colors = () => (
       fill={[
         {
           match: {
-            id: "ruby",
+            id: "fries",
           },
           id: "dots",
         },
         {
           match: {
-            id: "c",
-          },
-          id: "dots",
-        },
-        {
-          match: {
-            id: "go",
-          },
-          id: "dots",
-        },
-        {
-          match: {
-            id: "python",
-          },
-          id: "dots",
-        },
-        {
-          match: {
-            id: "scala",
-          },
-          id: "lines",
-        },
-        {
-          match: {
-            id: "lisp",
-          },
-          id: "lines",
-        },
-        {
-          match: {
-            id: "elixir",
-          },
-          id: "lines",
-        },
-        {
-          match: {
-            id: "javascript",
+            id: "sandwich",
           },
           id: "lines",
         },
       ]}
+      borderColor={{
+        from: "color",
+        modifiers: [["darker", 1.6]],
+      }}
+      axisTop={null}
+      axisRight={null}
+      axisBottom={{
+        tickSize: 5,
+        tickPadding: 5,
+        tickRotation: 0,
+        legend: "Colors",
+        legendPosition: "middle",
+        legendOffset: 32,
+        truncateTickAt: 0,
+      }}
+      axisLeft={{
+        tickSize: 5,
+        tickPadding: 5,
+        tickRotation: 0,
+        legend: "Value",
+        legendPosition: "middle",
+        legendOffset: -40,
+        truncateTickAt: 0,
+      }}
+      labelSkipWidth={12}
+      labelSkipHeight={12}
+      labelTextColor={{
+        from: "color",
+        modifiers: [["darker", 1.6]],
+      }}
       legends={[
         {
-          anchor: "bottom",
-          direction: "row",
+          dataFrom: "keys",
+          anchor: "bottom-right",
+          direction: "column",
           justify: false,
-          translateX: 0,
-          translateY: 56,
-          itemsSpacing: 0,
+          translateX: 120,
+          translateY: 0,
+          itemsSpacing: 2,
           itemWidth: 100,
-          itemHeight: 18,
-          itemTextColor: "#999",
+          itemHeight: 20,
           itemDirection: "left-to-right",
-          itemOpacity: 1,
-          symbolSize: 18,
-          symbolShape: "circle",
+          itemOpacity: 0.85,
+          symbolSize: 20,
           effects: [
             {
               on: "hover",
               style: {
-                itemTextColor: "#000",
+                itemOpacity: 1,
               },
             },
           ],
         },
       ]}
+      role="application"
+      ariaLabel="Nivo bar chart demo"
+      barAriaLabel={(e) =>
+        e.id + ": " + e.formattedValue + " in country: " + e.indexValue
+      }
     />
   </Box>
 );
