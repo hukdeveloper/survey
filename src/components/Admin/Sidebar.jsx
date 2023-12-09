@@ -95,6 +95,12 @@ const Sidebar = () => {
               >
                 Fav Number
               </MenuItem>
+              <MenuItem
+                icon={<Subject />}
+                onClick={() => router.push("/admin/forhead")}
+              >
+                Forhead Height
+              </MenuItem>
             </SubMenu>
           </Menu>
           <br />
