@@ -5,7 +5,7 @@ import GeoGraph from "../../../../components/Admin/Home/GeoGraph";
 
 const Geo = () => {
   return (
-    <div style={{ height: "500px" }}>
+    <div style={{ height: "500px", width: "800px" }}>
       <Typography variant="h6" mt={1}>
         Geographic Chart
       </Typography>

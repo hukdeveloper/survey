@@ -25,7 +25,7 @@ const data = [
 const Colors = () => (
   <Box height={"500px"}>
     <Typography variant="h6" mt={1}>
-      Colors Classification
+      Bar Chart
     </Typography>
     <ResponsiveBar
       data={data}
