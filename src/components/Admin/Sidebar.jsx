@@ -74,32 +74,32 @@ const Sidebar = () => {
                 onClick={() => router.push("/admin/gender")}
               >
                 {" "}
-                Gender
+                Pi Chart
               </MenuItem>
               <MenuItem
                 icon={<Apartment />}
                 onClick={() => router.push("/admin/colors")}
               >
                 {" "}
-                Colors
+                Bar Chart
               </MenuItem>
               <MenuItem
                 icon={<Subject />}
                 onClick={() => router.push("/admin/geo")}
               >
-                Geo Grpahic
+                Geo Map
               </MenuItem>
               <MenuItem
                 icon={<Subject />}
                 onClick={() => router.push("/admin/fav_number")}
               >
-                Fav Number
+                Scatter Plot
               </MenuItem>
               <MenuItem
                 icon={<Subject />}
                 onClick={() => router.push("/admin/forhead")}
               >
-                Forhead Height
+                Histogram
               </MenuItem>
             </SubMenu>
           </Menu>

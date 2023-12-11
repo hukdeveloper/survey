@@ -252,7 +252,7 @@ const GeoGraph = () => {
         data={data}
         options={{
           region: "world",
-          colorAxis: { colors: ["#FFD700", "#FF4500"] },
+          colorAxis: { colors: ["#FFD700", "#003CFF"] },
           backgroundColor: "#81d4fa",
           datalessRegionColor: "#f8bbd0",
           defaultColor: "#f5f5f5",
